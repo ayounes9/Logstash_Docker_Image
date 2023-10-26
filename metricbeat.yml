@@ -1,0 +1,19 @@
+metricbeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: true
+
+output.elasticsearch:
+  hosts: ["https://<es_node1>:9200","https://<es_node2>:9200","https://<es_node3>:9200"]
+  protocol: "https"
+  username: "elastic"
+  password: "<password>"
+  ssl.certificate_authorities: /etc/metricbeat/elasticsearch-ca.pem
+#  ssl.certificate: /etc/metricbeat/elasticsearch-ca.pem
+#  ssl.key: /etc/metricbeat/
+
+setup.kibana:
+  host: "https://<kibana_node>:5601"
+
+processors:
+  - add_host_metadata: ~
+  - add_docker_metadata: ~
