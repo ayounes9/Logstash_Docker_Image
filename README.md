@@ -3,14 +3,14 @@ Build a custom Docker image to run a Logstash container with Filebeat and Metric
 
 The files included are saved in a directory with the following structure:
 
-Dockerfile
-elasticsearch-ca.pem
-filebeat/filebeat.yml
-filebeat/logstash.yml
-log4j2.properties
-metricbeat/logstash-xpack.yml
-metricbeat/metricbeat.yml
-start-services.sh
+\Dockerfile
+\elasticsearch-ca.pem
+\filebeat/filebeat.yml
+\filebeat/logstash.yml
+\log4j2.properties
+\metricbeat/logstash-xpack.yml
+\metricbeat/metricbeat.yml
+\start-services.sh
 
 This custom image lets you run Logstash containers to ingest data to your Elasticsearch cluster, with Filebeat and Metricbeat installed on the container to view logs and metrics of the Logstash instance using the pre-built dashboards and monitoring UI in Kibana.
 
