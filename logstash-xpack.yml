@@ -1,0 +1,11 @@
+- module: logstash
+  xpack.enabled: true
+  metricsets:
+    - node
+    - node_stats
+  period: 10s
+  hosts: ["http://localhost:9600"]
+  username: "monitoring_user"
+  password: "<password>"
+  ssl.enabled: true
+  ssl.certificate_authorities: ["/etc/metricbeat/elasticsearch-ca.pem"]
