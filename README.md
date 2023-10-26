@@ -19,7 +19,7 @@ This custom image lets you run Logstash containers to ingest data to your Elasti
 Download the files and adjust the settings based on your environment; the Elasticsearch hosts, Kibana, usernames and passwords.
 
 Docker commands to build and run the container:
-# use "." at the end to point to the current directory where Dockerfile exists:
+Use "." at the end to point to the current directory where Dockerfile exists:
 $ docker build -t image_name .
 
 $ docker run -d -p 5044:5044/udp -v /path/to/your/logstash.conf:/usr/share/logstash/pipeline/logstash.conf --name container_name image_name
